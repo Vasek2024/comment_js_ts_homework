@@ -1,0 +1,127 @@
+.commentBlock {
+    padding: 14px;
+    margin: 0 auto;
+    max-width: 1050px;
+}
+.commentBlock__naw {
+    margin-bottom: 22px;
+    padding-left: 0;
+    padding-top: 20px;
+    padding-right: 0;
+    /* padding: 20px; */
+    height: 55px;
+    border: 1px solid red;
+}
+.commentBlock__naw-one{
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    /* text-decoration-skip-ink: none; */
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 1px solid greenyellow;
+}
+.commentBlock__sorting{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.commentBlock__sorting-down{
+    /* border: 1px solid yellow; */
+}
+.commentBlock__naw-two{
+    display: none;
+}
+.commentBlock__favorites{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.commentBlock__favorites-ok{
+
+}
+
+
+.commentBlock__form {
+    display: grid;
+    grid-template-columns: 1px 1fr fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid green;
+}
+.form__avatar {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.form__nik {
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+.form__nik-nome {
+}
+.form__nik-surname {
+}
+.form__error {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+.form__input {
+    grid-column: 2/7;
+    grid-row: 2/3
+}
+
+
+.commentBlock__commentOne {
+}
+.commentOne__avatar {
+}
+.commentOne__nik {
+}
+.commentOne__nik-nome {
+}
+.commentOne__nik-data {
+}
+.commentOne__text {
+}
+.commentOne__like {
+}
+.commentOne__like-answer {
+}
+.commentOne__like-favourites {
+}
+.text__like-voice {
+}
+.commentOne__voice-minus {
+}
+.commentOne__voice-number {
+}
+.commentOne__voice-plus {
+}
+.commentBlock__commentTwo {
+}
+.commentTwo__avatar {
+}
+.commentTwo__nik {
+}
+.commentTwo__nik-nome {
+}
+.commentTwo__nik-nomeOne {
+}
+.commentTwo__nik-data {
+}
+.commentTwo__text {
+}
+.commentTwo__like {
+}
+.commentTwo__like-favourites {
+}
+.commentTwo__like-voice {
+}
+.commentTwo__voice-minus {
+}
+.commentTwo__voice-number {
+}
+.commentTwo__voice-plus {
+}
