@@ -10,6 +10,7 @@
 <body>
     <div class="commentBlock">
         
+        <!-- Блоу с навигацией  (сортировке) -->
         <div class="commentBlock__naw">
             <ul class="commentBlock__naw-one">
                 <li>Комментарии &#10098; 80 &#10099;</li>
@@ -28,9 +29,10 @@
             </ul>
         </div>
 
+        <!-- Блок с формой -->
         <div class="commentBlock__form">
             <div class="form__avatar">
-                <img src="./images/samsung-memory-hjRC0i0oJxg-unsplash 1.jpg" alt="samsung-memory-hjRC0i0oJxg-unsplash 1">
+                <img class="form__avatar-samsung" src="./images/samsung-memory-hjRC0i0oJxg-unsplash 1.jpg" alt="samsung-memory-hjRC0i0oJxg-unsplash 1">
             </div>
             <div class="form__nik">
                 <span class="form__nik-nome">Максим</span>
@@ -40,14 +42,15 @@
                 <p>Макс. 1000 символов</p>
             </div>
             <div class="form__input">
-                <input type="text" placeholder="Введите текст сообщения..." />
-                <input type="button" value="Отправить" />
+                <input class="form__input-text" type="text" placeholder="Введите текст сообщения..." />
+                <input class="form__input-button" type="button" value="Отправить" />
             </div>
         </div>
 
+        <!-- Блок с первым комментарием -->
         <div class="commentBlock__commentOne">
             <div class="commentOne__avatar">
-                <img src="./images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="albert-dera-ILip77SbmOE-unsplash">
+                <img class="commentOne__avatar-albert" src="./images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="albert-dera-ILip77SbmOE-unsplash">
             </div>
             <div class="commentOne__nik">
                 <span class="commentOne__nik-nome">Алексей_1994b</span>
@@ -55,23 +58,28 @@
             </div>
             <div class="commentOne__text">
                 <p>Самое обидное когда сценарий по сути есть - в виде книг, где нет сюжетных дыр, всё логично, стройное повествование и достаточно взять и экранизировать оригинал как это было в первых фильмах с минимальным количеством отсебятины и зритель с восторгом примет любой такой фильм и сериал, однако вместо этого 'Кольца власти' просто позаимствовали имена из оригинала, куски истории, мало связанные между собой и выдали очередной среднячковый сериал на один раз в лучшем случае.</p>
-                <div class="commentOne__like">
+            </div>
+            <div class="commentOne__like">
+                <div class="commentOne__like-litter">
                     <img src="./images/Mask group(1).svg" alt="Ответить">
                     <span class="commentOne__like-answer">Ответить</span>
+                </div>
+                <div class="commentOne__like-choice">
                     <img src="./images/Mask group.svg" alt="В избранном">
                     <span class="commentOne__like-favourites">В избранном</span>
-                    <div class="text__like-voice">
-                        <img class="commentOne__voice-minus" src="./images/-.svg" alt="-">
-                        <span class="commentOne__voice-number">0</span>
-                        <img class="commentOne__voice-plus" src="./images/+.svg" alt="+">
-                    </div>
+                </div>    
+                <div class="commentOne__like-voice">
+                    <img class="commentOne__voice-minus" src="./images/-.svg" alt="-">
+                    <span class="commentOne__voice-number">0</span>
+                    <img class="commentOne__voice-plus" src="./images/+.svg" alt="+">
                 </div>
             </div>
         </div>
 
+        <!-- Блок со вторым комментарием (с ответом) -->
         <div class="commentBlock__commentTwo">
             <div class="commentTwo__avatar">
-                <img src="./images/mubariz-mehdizadeh-Py8F6-hRn5o-unsplash.jpg" alt="">
+                <img class="commentTwo__avatar-mubariz" src="./images/mubariz-mehdizadeh-Py8F6-hRn5o-unsplash.jpg" alt="">
             </div>
             <div class="commentTwo__nik">
                 <span class="commentTwo__nik-nome">Джунбокс3000</span>
@@ -81,15 +89,17 @@
             </div>
             <div class="commentTwo__text">
                 <p>Наверное, самая большая ошибка создателей сериала была в том, что они поставили уж слишком много надежд на поддержку фанатов вселенной. Как оказалось на деле, большинство 'фанатов' с самой настоящей яростью и желчью стали уничтожать сериал, при этом объективности в отзывах самый минимум.</p>
-                <div class="commentTwo__like">
-                    <!-- <span class="commentTwo__like-answer">Ответить</span> -->
-                     <img src="./images/Mask group(2).svg" alt="В избранное">
+            </div>
+            <div class="commentTwo__like">
+                <!-- <span class="commentTwo__like-answer">Ответить</span> -->
+                <div class="commentTwo__like-choice">
+                    <img src="./images/Mask group(2).svg" alt="В избранное">
                     <span class="commentTwo__like-favourites">В избранное</span>
-                    <div class="commentTwo__like-voice">
-                        <img class="commentTwo__voice-minus" src="./images/-.svg" alt="-">
-                        <span class="commentTwo__voice-number">3</span>
-                        <img class="commentTwo__voice-plus" src="./images/+.svg" alt="+">
-                    </div>
+                </div>
+                <div class="commentTwo__like-voice">
+                    <img class="commentTwo__voice-minus" src="./images/-.svg" alt="-">
+                    <span class="commentTwo__voice-number">3</span>
+                    <img class="commentTwo__voice-plus" src="./images/+.svg" alt="+">
                 </div>
             </div>
         </div>
