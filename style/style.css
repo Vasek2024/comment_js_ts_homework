@@ -1,8 +1,17 @@
+body {
+    box-sizing: border-box;
+}
+
+
+/* Обёртка коммента */
 .commentBlock {
     padding: 14px;
     margin: 0 auto;
-    max-width: 1050px;
+    max-width: 1022px;
 }
+
+
+/* Блок с навигацией */
 .commentBlock__naw {
     margin-bottom: 22px;
     padding-left: 0;
@@ -10,7 +19,7 @@
     padding-right: 0;
     /* padding: 20px; */
     height: 55px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .commentBlock__naw-one{
     padding: 0;
@@ -21,8 +30,8 @@
     color: #000;
     display: flex;
     align-items: center;
-    gap: 50px;
-    border: 1px solid greenyellow;
+    gap: 10%;
+    /* border: 1px solid greenyellow; */
 }
 .commentBlock__sorting{
     display: flex;
@@ -31,6 +40,9 @@
 }
 .commentBlock__sorting-down{
     /* border: 1px solid yellow; */
+}
+.none{
+    display: none;
 }
 .commentBlock__naw-two{
     display: none;
@@ -45,13 +57,14 @@
 }
 
 
+/* Блок с формой */
 .commentBlock__form {
     margin-bottom: 40px;
     display: grid;
     grid-template-columns: 91px 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
     row-gap: 15px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .form__avatar {
     grid-column: 1/2;
@@ -109,13 +122,15 @@
 }
 
 
+
+/* Блок с первым комментом */
 .commentBlock__commentOne {
     margin-bottom: 28px;
     display: grid;
     grid-template-columns: 91px 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto 1fr;
     row-gap: 15px;
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
 }
 .commentOne__avatar {
     grid-column: 1/2;
@@ -176,13 +191,16 @@ color: silver;
 }
 
 
+
+/* Блок со вторым комментом (ответом) */
 .commentBlock__commentTwo {
+    margin-left: 10%;
     margin-bottom: 28px;
     display: grid;
     grid-template-columns: 91px 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto 1fr;
     row-gap: 15px;
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
 }
 .commentTwo__avatar {
     grid-column: 1/2;
@@ -216,26 +234,195 @@ color: silver;
     grid-row: 2/3;
 }
 .commentTwo__like {
-    /* display: flex; */
-    /* column-gap: 10px; */
+    grid-column: 2/5;
+    grid-row: 3/4;
+    display: flex;
+    column-gap: 8%;
 }
 .commentTwo__like-choice{
     display: flex;
     column-gap: 10px;
     align-items: center;
     font-weight: 400;
-font-size: 18px;
-color: silver;
+    font-size: 18px;
+    color: silver;
 }
 .commentTwo__like-favourites {
 }
 .commentTwo__like-voice {
-    /* display: flex; */
-    /* align-items: center; */
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 .commentTwo__voice-minus {
 }
 .commentTwo__voice-number {
 }
 .commentTwo__voice-plus {
+}
+
+
+/* Медиа запросы (адаптив) */
+@media (max-width: 763px) {
+    .commentBlock__naw-one{
+        gap: 4%;
+    }
+    .form__nik-nome,
+    .form__nik-surname,
+    .commentOne__nik-nome,
+    .commentOne__nik-data,
+    .commentOne__like-answer,
+    .commentOne__like-favourites,
+    .commentTwo__like-favourites,
+    .commentTwo__nik-nome,
+    .commentTwo__nik-nomeOne,
+    .commentTwo__nik-data {
+        /* column-gap: 7px; */
+        font-size: 16px;
+    }
+    .form__input-text{
+        padding-left: 4%;
+    }
+    .form__input-button{
+        height: 51px;
+    }
+    .form__avatar-samsung,
+    .commentOne__avatar-albert,
+    .commentTwo__avatar-mubariz{
+        width: 51px;
+        border-radius: 50px;
+    }
+  }
+
+
+@media (max-width: 530px) {
+    .commentBlock__naw-one{
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 6px
+    }
+    .commentBlock__naw-two{
+        display: none;
+    }
+    
+    
+    /* Блок с формой*/
+    .commentBlock__form {
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .form__avatar {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .form__avatar-samsung,
+    .commentOne__avatar-albert,
+    .commentTwo__avatar-mubariz{
+        width: 50px;
+    }
+    .form__nik {
+        grid-column: 2/6;
+        grid-row: 1/2;
+    }
+    .form__error {
+        grid-column: 4/6;
+        grid-row: 2/3;
+    }
+    .form__input {
+        grid-column: 1/6;
+        grid-row: 3/4;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .form__input-text{
+        padding: 12px;
+        width: 100%;
+    }
+    .form__input-button{
+        width: 100%;
+        height: 50px;
+    }
+    
+    
+    
+    /* Первый коммент */
+    .commentBlock__commentOne {
+        display: grid;
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .commentOne__avatar {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .commentOne__nik {
+        grid-column: 2/6;
+        grid-row: 1/2;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+    }
+    .commentOne__text {
+        grid-column: 1/6;
+        grid-row: 2/3;
+    }
+    .commentOne__like {
+        grid-column: 1/6;
+        grid-row: 3/4;
+        column-gap: 5%;
+        
+    }
+    .commentOne__like-voice{
+        flex-flow: column;
+        row-gap: 8px;
+        color: #8ac540;
+    }
+    
+    
+
+    /* Второй коммент (ответ) */
+    .commentBlock__commentTwo {
+        margin-left: 0;
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .commentTwo__avatar {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .commentTwo__nik {
+        grid-column: 2/6;
+        grid-row: 1/2;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        align-items: center;
+    }
+    .commentTwo__text {
+        grid-column: 1/6;
+        grid-row: 2/3;
+    }
+    .commentTwo__like {
+        grid-column: 1/6;
+        grid-row: 3/4;
+        display: flex;
+    }
+    .commentTwo__like-voice {
+        flex-flow: column;
+        row-gap: 8px;
+        color: #8ac540;
+    }
+  }
+  
+  @media (max-width: 312px) {
+    .commentBlock__naw{
+        margin-bottom: 50px;
+    }
+    .form__error {
+        grid-column: 3/6;
+        grid-row: 2/3;
+    }
 }

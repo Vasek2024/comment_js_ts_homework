@@ -22,7 +22,7 @@
 
     body {
         min-block-size: 100dvh;
-
+box-sizing: border-box;
         /* Font synthesis is largely undesirable, disable it to make it more obvious when font styles are missing. */
         font-synthesis: none;
         -webkit-font-smoothing: antialiased;
