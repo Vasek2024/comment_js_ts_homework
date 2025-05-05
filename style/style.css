@@ -91,12 +91,15 @@ body {
     color: #122ac0;
 }
 .form__error {
-    grid-column: 5/6;
+    grid-column: 5/7;
     grid-row: 1/2;
     font-style: italic;
     font-weight: 400;
     font-size: 14px;
     color: #000;
+}
+.error-length{
+    color: red;
 }
 .form__input {
     grid-column: 2/7;
@@ -155,6 +158,10 @@ color: silver;
 .commentOne__text {
     grid-column: 2/8;
     grid-row: 2/3;
+}
+.newP{
+    margin: 0 0 16px 0;
+    border: 1px solid silver;
 }
 .commentOne__like {
     grid-column: 2/8;
@@ -328,8 +335,9 @@ color: silver;
         grid-row: 1/2;
     }
     .form__error {
-        grid-column: 4/6;
+        grid-column: 3/6;
         grid-row: 2/3;
+        justify-self: end;
     }
     .form__input {
         grid-column: 1/6;
