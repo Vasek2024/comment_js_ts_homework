@@ -2,6 +2,10 @@ body {
     box-sizing: border-box;
 }
 
+.none{
+    display: none;
+}
+
 
 /* Обёртка коммента */
 .commentBlock {
@@ -32,6 +36,7 @@ body {
     align-items: center;
     gap: 10%;
     /* border: 1px solid greenyellow; */
+    
 }
 .commentBlock__sorting{
     display: flex;
@@ -41,12 +46,30 @@ body {
 .commentBlock__sorting-down{
     /* border: 1px solid yellow; */
 }
-.none{
+/* .none{
     display: none;
-}
+} */
 .commentBlock__naw-two{
-    display: none;
+    margin-top: 140px;
+    padding: 8px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+font-size: 16px;
+text-decoration: none;
+/* user-select: none; */
+/* outline: none; */
+/* filter: drop-shadow(0px 1px 0px rgba(0,0,0,0.3)); */
+/* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6); */
+/* text-decoration: none; */
+background: #fff;
+    /* display: none; */
+    position: absolute;
 }
+/* input[type="checkbox"]  {
+    display: none;
+ } */
 .commentBlock__favorites{
     display: flex;
     align-items: center;
@@ -123,6 +146,16 @@ body {
     color: #3a3636d2;
     border: none;
 }
+.btnOk{
+    color: #000000;
+    background-color: #ABD873;
+}
+
+
+.commentBlock__newComments{
+    border: 1px solid rebeccapurple;
+    height: 300px;
+}
 
 
 
@@ -131,7 +164,7 @@ body {
     margin-bottom: 28px;
     display: grid;
     grid-template-columns: 91px 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
     row-gap: 15px;
     /* border: 1px solid rebeccapurple; */
 }
@@ -193,8 +226,35 @@ color: silver;
     border-radius: 100px; */
 }
 .commentOne__voice-number {
+    color: #8ac540;
 }
 .commentOne__voice-plus {
+}
+
+
+/* блок с формой ответа на коммент */
+.answer__form {
+    padding-left: 60px;
+    grid-column: 1/8;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: space-between;
+}
+.answer__input{
+    padding-left: 30px;
+    width: 74%;
+    border-radius: 5px;
+    border: 3px solid silver;
+}
+.answer__button{
+    width: 24%;
+    height: 51px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    background: #a1a1a1;
+    color: #3a3636d2;
+    border: none;
 }
 
 
@@ -264,6 +324,7 @@ color: silver;
 .commentTwo__voice-minus {
 }
 .commentTwo__voice-number {
+    color: #8ac540;
 }
 .commentTwo__voice-plus {
 }
@@ -389,6 +450,22 @@ color: silver;
         row-gap: 8px;
         color: #8ac540;
     }
+
+   /* блок с формой ответа на коммент */
+.answer__form {
+    padding-left: 0;
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+}
+.answer__input{
+    height: 51px;
+    width: 100%;
+}
+.answer__button{
+    width: 100%;
+    height: 51px;
+}
     
     
 
@@ -424,6 +501,7 @@ color: silver;
         color: #8ac540;
     }
   }
+
   
   @media (max-width: 312px) {
     .commentBlock__naw{
