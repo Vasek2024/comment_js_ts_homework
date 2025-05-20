@@ -1,18 +1,7 @@
 import { BtnClick } from './jsClass/BtnClick.js'
-import { FavouritesClick } from './jsClass/FavouritesClick.js'
-
-
-// let input = document.querySelector(".form__input-text").value
 
 
 let commentOneElement = document.querySelector('.commentBlock__commentOne') // Общий Блок полд новые комменты
-
-
-// let commentOneElement = document.createElement('div') // Общий Блок полд новые комменты
-// commentOneElement.className = 'commentBlock__newComments'
-
-// let commentOneElement = document.createElement('div') // Общий блок с первым комментом
-// commentOneElement.className = 'commentBlock__commentOne'
 
 let avatarElement = document.createElement('div') // Общий блок под аватарку
 avatarElement.className = 'commentOne__avatar'
@@ -160,43 +149,27 @@ plusTwoElement.src = "./images/+.svg"
 
 
 
-
-// =============================================
-
 let favoritesOkElement = document.querySelector('.commentBlock__favorites-ok'), // Избранное (в верхнем меню)
     favoritesNoyElement = document.querySelector('.commentBlock__favorites-noy') // Избранное (в верхнем меню)
-
 
 
 const okElement = document.querySelector('.form__error-ok'), // Макс. 1000 символов
         limitElement = document.querySelector('.form__error-limit'), // /1000 Слишком длинное сообщение
         quantityElement = document.querySelector('.form__error-quantity') // поле под коллсчество введённых символов
-        // inputlengthElement = +input.length // коллсчество введённых символов
 
-        // quantityElement.textContent = inputlengthElement // заносим туда введённые значения
-
-            // okElement.classList.remove('active') // удалили  класс
-            // okElement.classList.add('none') // добавили класс
-            // limitElement.classList.remove('none') // удалили  класс
-            // limitElement.classList.add('active') // добавили класс
-            // limitElement.style.color = "red" // добавили стиль
-
-            
-
+const liElement = document.querySelector('.commentBlock__sorting') // По количеству оценок
 
 
     const btnElement = document.querySelector('.form__input-button')
-    // errorOk = document.querySelector('.form__error-ok'), // Макс. 1000 символов
-    // errorLimit = document.querySelector('.form__error-limit'), // /1000 Слишком длинное сообщение
-    // errorQuantity = document.querySelector('.form__error-quantity'), // поле под коллсчество введённых символов
-    // // let inputlength = +input.length // коллсчество введённых символов
-    // // formSamsung = document.querySelector('.form__avatar-samsung').src, // картинкка бородатого
-    // formNome = document.querySelector('.form__nik-nome').innerHTML, // Максим
-    // formSurname = document.querySelector('.form__nik-surname').innerHTML // Авдеенко
-    // if(input != ''){
-    //     btnElement.classList.add('btnOk'); // задаём класс
-    //             }
-    // console.log(input)
+
+// При кликк по вкладке (По количеству оценок)
+liElement.addEventListener('click', function() {
+    let nawLiElement = document.querySelector('.commentBlock__naw-two') // Выпадающий список
+    let imgLiElement = document.querySelector('.commentBlock__sorting-down') // Картинка по количеству оценок
+    let app = new BtnClick()
+    app.nawElement(nawLiElement, imgLiElement)
+})
+
 
     btnElement.addEventListener('click', function(evt) {
         let input = document.querySelector(".form__input-text").value
@@ -253,12 +226,12 @@ const okElement = document.querySelector('.form__error-ok'), // Макс. 1000 �
         );
 app.valueComment()
 
-// При кликк по вкладке В избранное
+// При кликк по вкладке
 favouritesElement.addEventListener('click', function(evt) {
     app.favourites()
 })
 
-// При клике по ссылке Ответить
+    // При клике по ссылке Ответить
     answerElement.addEventListener('click', function(evt) {
         // let answerInput = document.querySelector(".answer__input").value
             app.answer()

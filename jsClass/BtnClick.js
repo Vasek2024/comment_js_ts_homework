@@ -1,6 +1,3 @@
-// import { FavouritesClick } from './jsClass/FavouritesClick.js'
-
-
 export class BtnClick{
     constructor(
         input,
@@ -78,7 +75,6 @@ this.favoritesNoyElement = favoritesNoyElement
 this.limitElement = limitElement
 this.quantityElement = quantityElement
 this.btnElement = btnElement
-// this.inputlength = +this.input.length // коллсчество введённых символов
 this.limit = 1000
 this.numberLimit = 6
 this.numberLimitAnswer = 6
@@ -109,6 +105,24 @@ this.plusTwoElement = plusTwoElement
 this.date = new Date();
     }
 
+
+// Выпадающий список и замена иконки
+nawElement(nawLiElement, imgLiElement){
+    this.nawLiElement = nawLiElement
+    this.imgLiElement = imgLiElement
+    this.nawLiElement.classList.toggle('active')
+    this.nawLiElement.classList.toggle('none')
+    this.nameClass = this.nawLiElement.className
+    if(this.nameClass === 'commentBlock__naw-two active'){
+        this.imgLiElement.src = './images/Arrow 1.svg'
+               
+    } else {
+        this.imgLiElement.src = './images/Arrow 2.svg'
+    }
+}
+
+
+
 // Добавляем элементы в DOM дерево при отправке первой формы
     creatsElement(inputText) {
         this.commentOneElement.append(this.avatarElement)
@@ -136,15 +150,10 @@ this.date = new Date();
         this.numberElement.textContent = this.numberLimit
         this.voiceElement.append(this.numberElement)
         this.voiceElement.append(this.plusElement)
-
-        // this.answerFotmElement.classList('none')
-        // this.commentOneElement.append(this.answerFotmElement)
-        // this.answerFotmElement.append(this.answerInputElement)
-        // this.answerFotmElement.append(this.answerButtonElement)
     }
 
 
-    // Добавляем элементы в DOM дерево при отправке первой формы
+    // Добавляем элементы в DOM дерево при отправке второй формы
     creatsTwoElement(answerInputText) {
         this.commentTwoElement.append(this.avatarTwoElement)
         this.avatarTwoElement.append(this.albertTwoElement)
@@ -165,21 +174,11 @@ this.date = new Date();
         this.choiceTwoElement.append(this.activTwoElement)
         this.choiceTwoElement.append(this.favouritesTwoElement)
 
-        // this.likeTwoElement.append(this.choiceElement)
-        // this.choiceElement.append(this.noyActivElement)
-        // this.choiceElement.append(this.activElement)
-        // this.choiceElement.append(this.favouritesElement)
-
         this.likeTwoElement.append(this.voiceTwoElement)
         this.voiceTwoElement.append(this.minusTwoElement)
         this.numberTwoElement.textContent = this.numberLimitAnswer
         this.voiceTwoElement.append(this.numberTwoElement)
         this.voiceTwoElement.append(this.plusTwoElement)
-
-        // this.answerFotmElement.classList('none')
-        // this.commentOneElement.append(this.answerFotmElement)
-        // this.answerFotmElement.append(this.answerInputElement)
-        // this.answerFotmElement.append(this.answerButtonElement)
     }
     
    // Стиль кнопки ои заполнения поля ввода коммента
@@ -209,10 +208,6 @@ this.date = new Date();
         this.noyActivTwoElement.classList.toggle('none')
         this.activTwoElement.classList.toggle('none') 
         this.activTwoElement.classList.toggle('active')
-        // this.favoritesOkElement.classList.toggle('active')
-        // this.favoritesOkElement.classList.toggle('none')
-        // this.favoritesNoyElement.classList.toggle('active')
-        // this.favoritesNoyElement.classList.toggle('none')
 }
 
 
@@ -229,7 +224,6 @@ this.date = new Date();
 answerBtn(){
     let answerInput = document.querySelector(".answer__input").value
     this.answerInput = answerInput
-    // console.log(this.answerInput);
     
     if(this.answerInput === ""){
         alert('Ва забыли написать ответ к комментарию!')
@@ -240,28 +234,16 @@ answerBtn(){
         this.limitElement.classList.remove('none') // удалили  класс
         this.limitElement.classList.add('active') // добавили класс
         this.limitElement.style.color = "red" // добавили стиль
-        // console.log('>1000');
-        
     } else { // если всё хорошо,
         this.okElement.classList.remove('none') // удалили  класс
         this.okElement.classList.add('active') // добавили класс
         this.limitElement.classList.remove('active') // удалили  класс
         this.limitElement.classList.add('none') // добавили класс
-
         this.answerFotmElement.remove() // удаляем форму с ответом
         
-        // this.answerList.push(this.answerInput) // заносим в массив комментарии
-        //  проходим циклом
-            // for (let i = 0; i < this.guestList.length; i++) {
-                // заносим в localStorage и читаем их
-                localStorage.setItem(answerInput, this.answerInput)
-                    this.answerInputText = localStorage.getItem(answerInput)
-                    // console.log(this.answerInputText);
-                    // this.creatsElement(this.inputText) // Добавляем элементы в DOM дерево
-            // }
-
-            // this.fav = new FavouritesClick()
-            this.creatsTwoElement(this.answerInputText)
+        localStorage.setItem(answerInput, this.answerInput)
+        this.answerInputText = localStorage.getItem(answerInput)
+        this.creatsTwoElement(this.answerInputText)
     }
 }
 
@@ -273,7 +255,6 @@ answerBtn(){
         if(this.input === ""){
             alert('Ва забыли написать комментарий!')
         } else if (this.input.length > 1000) {//  если более 1000 символов, то  (красим в красный Макс. 1000 символов)
-            // alert('>1000')
             this.quantityElement.textContent = this.input.length // заносим туда введённые значения
             this.okElement.classList.remove('active') // удалили  класс
             this.okElement.classList.add('none') // добавили класс
@@ -295,8 +276,6 @@ answerBtn(){
                         // console.log(this.inputText);
                         this.creatsElement(this.inputText) // Добавляем элементы в DOM дерево
                 }
-
-                // this.fav = new FavouritesClick()
         }
     }
 
